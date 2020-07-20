@@ -1,0 +1,108 @@
+<%- include('header'); -%>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+            <!-- Title -->
+            <h1 class="mt-4"><%= post.title%></h1>
+
+            <!-- Author -->
+            <p class="lead">
+                by
+                <a href="/posts/About%20Me"><%= post.author%></a>
+            </p>
+
+            <hr>
+
+            <!-- Date/Time -->
+            <p>Posted on <%= post.date%></p>
+
+            <hr>
+
+
+            <% if(post.category === 'cs'){%>
+                <svg class="cs" width="700" height="400"
+                     preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder:
+                         Thumbnail">
+                </svg>
+            <%}else if(post.category === 'school'){%>
+                <svg class="school" width="700" height="300"
+                     preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder:
+                         Thumbnail">
+                </svg>
+            <%}else if(post.category === 'school'){%>
+                <svg class="me" width="700" height="300"
+                     preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder:
+                         Thumbnail">
+                </svg>
+            <%}else{%>
+                <svg class="other" width="700" height="300"
+                     preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder:
+                         Thumbnail">
+                </svg>
+            <%}%>
+            <!-- Preview Image -->
+
+
+            <hr>
+
+            <!-- Post Content -->
+            <p><%- post.text%></p>
+            <hr>
+
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+
+
+            <!-- Categories Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Social Media</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="https://marco.academy">Resume</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/marco-georgaklis">GitHub</a>
+                                </li>
+                                <li>
+                                    <a href="https://linkedin.com/in/marco-georgaklis">Linkedin</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="https://www.facebook.com/marco.georgaklis.5">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/marc0ge0">Twitter</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+<%- include('footer'); -%>

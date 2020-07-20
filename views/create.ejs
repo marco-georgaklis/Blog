@@ -1,0 +1,24 @@
+<%- include('header'); -%>
+
+<div class="container">
+    <h1>Compose a Post</h1>
+
+    <form action="/create" method="post">
+        <label> Title</label>
+        <input class="form-control" type="text" name="postTitle">
+        <label> Author</label>
+        <input class="form-control" type="text" name="postAuthor">
+        <label> Category</label>
+        <input class="form-control" type="text" name="postCategory">
+        <label> Post</label>
+        <input class="form-control" type="text" name="postBody">
+        <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+</div>
+
+
+
+<%- include('footer'); -%>
